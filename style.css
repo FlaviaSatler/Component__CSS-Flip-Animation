@@ -1,0 +1,59 @@
+.flip-container {
+    perspective: 1000;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -o-perspective: 1000;
+    border: 1px solid rgb(192, 189, 189);
+    margin: 50px auto;
+
+}
+
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
+
+.flip-container,
+.front,
+.back {
+    width: 320px;
+    height: 427px;
+}
+
+.flipper {
+    transition: 0.9s;
+    transform-style: preserve-3d;
+    -webkit-transition: 0.9s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transition: 0.9s;
+    -moz-transform-style: preserve-3d;
+    -o-transition: 0.9s;
+    -o-transform-style: preserve-3d;
+    position: relative;
+}
+
+.front,
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.front,
+.back h1{
+    text-align: center;
+}
+
+.front {
+    background-color: #f8d9d9;
+}
+
+.back {
+    transform: rotateY(180deg);
+    background-color: #c9c3c3;
+}
+
